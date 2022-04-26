@@ -1,0 +1,8 @@
+/*
+FUNCOES BASE PARA PROGRAMAS DE LISTA CIRCULAR COM NÓ BOBO
+MONITORIA DE ESTRUTURA DE DADOS 22.1
+*/
+
+#include <stdio.h>
+#include <stdlib.h>s
+#define TAM 10
