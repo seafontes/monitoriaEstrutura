@@ -15,7 +15,7 @@ typedef struct tpilha{
 
 //inicializar
 void inicializa(tpilha *p){
-p->topo =-1ç
+p->topo =-1;
 }
 
 //checar pilha vazia

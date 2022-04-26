@@ -18,7 +18,7 @@ void inicializa(tfila *pf){
 }
 //teste vazio
 int filavazia(tfila *pf){
-    if(pf>F==pf->R)
+    if(pf->F==pf->R)
         return 1;
     return 0;
 }
@@ -41,6 +41,6 @@ int removefila(tfila *pf, int *elem){
     if(filavazia(pf))
         return 0;
     pf->F = (pf->F+1)%TAM;
-    *elem = pf->fila[pf->f];
+    *elem = pf->fila[pf->F];
     return 1;
 }

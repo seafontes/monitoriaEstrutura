@@ -22,7 +22,7 @@ void inicializa(tfilac *pf){
 int filavazia(tfilac *pf){
     if(pf->cont==0)
         return 1;
-    return 0
+    return 0;
 }
 
 int filacheia(tfilac *pf){
