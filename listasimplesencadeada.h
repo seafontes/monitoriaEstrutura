@@ -67,7 +67,7 @@ lista *removeUltimo(lista *p){
     }
     else{
         q=p;
-        while(!q->prox){
+        while(q->prox){
             t=q;
             q=q->prox;
         }
@@ -76,4 +76,73 @@ lista *removeUltimo(lista *p){
         return(p);
     }
 }
-//CONTINUAR ESCREVENDO AS PROXIMAS FUNCOES
+//inserir apos 1o no
+lista *insereApos(lista *p, int valor){
+    lista *q, *t;
+    q = (lista *)malloc(sizeof(lista));
+    q->info = valor;
+    if(!p->prox){
+        q->prox = p->prox;
+        p->prox=q;
+        return(p);
+    }
+    else{
+        q->prox=p->prox;
+        p->prox=q;
+    }
+    return(p);
+}
+//juntar duas listas, coloca uma no final da outra
+lista *concatena(lsita *x, lista *y){
+    lista *l;
+    if(!x)
+        return(y);
+    l=x;
+    while(l->prox)
+        l=l->prox;
+    l->prox=y;
+    return(x);
+}
+//remover o k-esimo
+lista *removeK(lista *p. int k){
+    lista *q, *t;
+    int cont;
+    if(k==1){
+        if(!p->prox){
+            free(p);
+            return(NULL)
+        }
+        else{
+            q=p->prox;
+            free(p);
+            return(q);
+        }
+    }
+    else{
+        cont=1;
+        q=p;
+        while(cont!=k){
+            t=q;
+            q=q->prox;
+            cont++;
+        }
+        t->prox = q->prox;
+        free(q);
+        return(p);
+    }
+}
+//inserir no final
+lista *inserirFim(lista *p, int valor){
+    lista *q, *novo;
+    novo = (lista *)malloc(sizeof(lista));
+    novo->info=valor;
+    novo->prox=NULL;
+    if(!p)
+        return(novo);
+    q=p;
+    while(q->prox){
+        q=q->prox;
+    }
+    q->prox=novo;
+    return(p);
+}
